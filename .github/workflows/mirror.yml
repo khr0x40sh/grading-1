@@ -1,0 +1,15 @@
+name: Mirroring
+
+on: [pull, push, delete]
+
+jobs:
+  to_gitlab:
+    runs-on: ubuntu-latest
+    steps:                                              # <-- must use actions/checkout before mirroring!
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url:
+            git@gitlab.com:khr0x40sh/grading-1.git
