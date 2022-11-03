@@ -8,7 +8,7 @@ jobs:
       - name: git-sync
         uses: wei/git-sync@v3
         with:
-          source_repo: ${{ github.event.pull_request.head.repo.full_name }}
+          source_repo: "https://github.com/Octoversity/grading-khr0x40sh.git"
           source_branch: "main"
           destination_repo: "https://khr0x40sh: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@github.com/khr0x40sh/grading-1.git"
           destination_branch: "main"
